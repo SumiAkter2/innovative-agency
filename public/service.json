@@ -1,0 +1,26 @@
+[
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/rxy2gXR/web-development-coding-programming-internet-technology-business-concept-web-development-coding-progr.jpg",
+        "name": "Web Development",
+        "des": "lorem dlff lskdfjadh sdgfds "
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/L9pMwfm/graphic.jpg",
+        "name": "Graphic Design",
+        "des": "lorem dlff lskdfjadh sdgfds "
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co/8g1QTGB/Types-of-Digital-Marketing.png",
+        "name": "Digital Marketing ",
+        "des": "lorem dlff lskdfjadh sdgfds "
+    },
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/JkxcFxZ/image1-9.jpg",
+        "name": "Web & Mobile Design",
+        "des": "lorem dlff lskdfjadh sdgfds "
+    }
+]

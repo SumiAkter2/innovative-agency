@@ -1,50 +1,25 @@
-import React from 'react';
-import img1 from '../../assets/images/graphic.jpg'
-import img2 from '../../assets/images/web.jpg';
-import img3 from '../../assets/images/image1-9.jpeg';
-import img4 from '../../assets/images/seo-23789741.jpg';
-import img5 from '../../assets/images/Types-of-Digital-Marketing.png';
+import React, { useEffect, useState } from 'react';
 import Service from './Service';
+
+
 const Services = () => {
-    const services = [{
-        id: 1,
-        img: 'img2',
-        name: 'Web & Mobile Design',
-        des: 'lorem dlff lskdfjadh sdgfds '
-    },
-    {
-        id: 2,
-        img: 'img3',
-        name: 'Web Development',
-        des: 'lorem dlff lskdfjadh sdgfds '
-    },
-    {
-        id: 3,
-        img: 'img1',
-        name: 'Graphic Design',
-        des: 'lorem dlff lskdfjadh sdgfds '
-    },
-    {
-        id: 4,
-        img: 'img4',
-        name: 'Seo',
-        des: 'lorem dlff lskdfjadh sdgfds '
-    },
-    {
-        id: 5,
-        img: 'img5',
-        name: 'Digital Marketing ',
-        des: 'lorem dlff lskdfjadh sdgfds '
-    },
-    ]
+    const [services, setServices] = useState([]);
+    useEffect(() => {
+        fetch('service.json')
+            .then(res => res.json())
+            .then(data => setServices(data))
+    }, [])
     return (
-        <div>
-            {
-                services.map(service => <Service
-                    key={service.id}
-                    service={service}
-                ></Service>)
-            }
+        <div className='lg:my-24'>
+            <h1 className='text-5xl font-bold text-center my-12  text-violet-500 '>Our Services</h1>
+            <div className='grid lg:grid-cols-4  md:grid-cols-4 mx-auto gap-3  px-24'>
+                {
+                    services.map(s => <Service
+                        key={s.id}
+                        s={s}
+                    ></Service>)
+                }
+            </div>
         </div>
     );
 };
