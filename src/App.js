@@ -7,6 +7,9 @@ import Portfolio from './Pages/Portfolio/Portfolio';
 import Contact from './Pages/Contact/Contact';
 import Footer from './Pages/Home/Footer';
 import LogIn from './Pages/Login/LogIn';
+import SignIn from './Pages/Login/SignIn';
+import RequireAuth from './Pages/Login/RequireAuth';
+import Team from './Pages/Team/Team';
 
 
 function App() {
@@ -18,9 +21,9 @@ function App() {
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
           <Route path='/login' element={<LogIn></LogIn>}></Route>
-          {/* <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route> */}
+          <Route path='/signup' element={<SignIn />}></Route>
           <Route path='/contact' element={<Contact></Contact>}></Route>
-          {/* <Route path='/' element={<Home></Home>}></Route> */}
+          <Route path='/team' element={<RequireAuth><Team></Team></RequireAuth>}></Route>
         </Routes>
         <Footer></Footer>
       </Navbar>
