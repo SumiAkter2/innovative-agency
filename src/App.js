@@ -10,6 +10,8 @@ import LogIn from './Pages/Login/LogIn';
 import SignIn from './Pages/Login/SignIn';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Team from './Pages/Team/Team';
+import Order from './Pages/DashBoard/Order';
+import Dashboard from './Pages/DashBoard/Dashboard';
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
           <Route path='/login' element={<LogIn></LogIn>}></Route>
+          <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
           <Route path='/signup' element={<SignIn />}></Route>
           <Route path='/contact' element={<Contact></Contact>}></Route>
           <Route path='/team' element={<RequireAuth><Team></Team></RequireAuth>}></Route>

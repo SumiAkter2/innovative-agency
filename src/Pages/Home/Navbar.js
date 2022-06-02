@@ -1,11 +1,14 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
 import icon from '../../assets/images/idea.png'
+import auth from '../../firebase.init';
 import Button from '../Button';
 
 
 
 const Navbar = ({ children }) => {
+    // const { user } = useAuthState(auth)
     return (
         <div>
             <div class="drawer drawer-end ">
@@ -31,6 +34,7 @@ const Navbar = ({ children }) => {
                             <ul class="menu menu-horizontal ">
                                 {/* <!-- Navbar menu content here --> */}
                                 <li >  <NavLink to='/' className='rounded-lg  mr-4'>Home</NavLink></li>
+                                <li >  <NavLink to='/dashboard' className='rounded-lg  mr-4'>Dashboard</NavLink></li>
                                 <li > <NavLink className='rounded-lg mr-4' to='/portfolio'>Portfolio</NavLink></li>
                                 <li > <NavLink className='rounded-lg mr-4' to='/team'>Our Team</NavLink></li>
                                 <li ><NavLink className='rounded-lg mr-4' to='/contact'>Contact Us</NavLink></li>
