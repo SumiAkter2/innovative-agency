@@ -2,25 +2,29 @@
     {
         "id": 2,
         "img": "https://i.ibb.co/rxy2gXR/web-development-coding-programming-internet-technology-business-concept-web-development-coding-progr.jpg",
+        "price": "3000Tk",
         "name": "Web Development",
-        "des": "lorem dlff lskdfjadh sdgfds "
+        "des": "Web development is the work involved in developing a website for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services. "
     },
     {
         "id": 3,
         "img": "https://i.ibb.co/L9pMwfm/graphic.jpg",
         "name": "Graphic Design",
-        "des": "lorem dlff lskdfjadh sdgfds "
+        "price": "3000Tk",
+        "des": "Graphic design is the profession and academic discipline whose activity consists in projecting visual communications intended to transmit specific messages to social groups, with specific objectives."
     },
     {
         "id": 5,
         "img": "https://i.ibb.co/8g1QTGB/Types-of-Digital-Marketing.png",
         "name": "Digital Marketing ",
-        "des": "lorem dlff lskdfjadh sdgfds "
+        "price": "3000Tk",
+        "des": "Digital marketing is the component of marketing that uses the Internet and online based digital technologies such as desktop computers, mobile phones and other digital media and platforms to promote products and services."
     },
     {
         "id": 1,
         "img": "https://i.ibb.co/JkxcFxZ/image1-9.jpg",
         "name": "Web & Mobile Design",
-        "des": "lorem dlff lskdfjadh sdgfds "
+        "price": "3000Tk",
+        "des": "Mobile web design is the process of optimizing web experience for mobile users. This process includes creating: Mobile-first design. Traditionally, websites have been optimized for desktop users, but as browsing habits have evolved, designers tend to follow a mobile-first approach in design."
     }
 ]

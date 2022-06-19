@@ -1,6 +1,7 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import icon from '../../assets/images/idea.png'
 import auth from '../../firebase.init';
 import Button from '../Button';
@@ -8,7 +9,13 @@ import Button from '../Button';
 
 
 const Navbar = ({ children }) => {
-    // const { user } = useAuthState(auth)
+    const [user] = useAuthState(auth);
+
+    const logout = () => {
+        signOut(auth);
+        // localStorage.removeItem('accessToken');
+    };
+
     return (
         <div>
             <div class="drawer drawer-end ">
@@ -38,7 +45,10 @@ const Navbar = ({ children }) => {
                                 <li > <NavLink className='rounded-lg mr-4' to='/portfolio'>Portfolio</NavLink></li>
                                 <li > <NavLink className='rounded-lg mr-4' to='/team'>Our Team</NavLink></li>
                                 <li ><NavLink className='rounded-lg mr-4' to='/contact'>Contact Us</NavLink></li>
-                                <NavLink className='rounded-lg mr-4' to='/login'><Button>Log In</Button></NavLink>
+
+                                {user ? <NavLink onClick={logout} className='rounded-lg ' to='/login'><Button>Sign Out</Button></NavLink> : <NavLink className='rounded-lg mr-4' to='/login'><Button>Log In</Button></NavLink>}
+
+
                             </ul>
                         </div>
                     </div>

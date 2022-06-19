@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Navbar from './Pages/Home/Navbar';
 import { Route, Routes } from 'react-router-dom';
@@ -10,8 +10,16 @@ import LogIn from './Pages/Login/LogIn';
 import SignIn from './Pages/Login/SignIn';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Team from './Pages/Team/Team';
-import Order from './Pages/DashBoard/Order';
 import Dashboard from './Pages/DashBoard/Dashboard';
+import Order from './Pages/DashBoard/Order';
+import MakeAdmin from './Pages/DashBoard/MakeAdmin';
+import Review from './Pages/DashBoard/Review';
+// import ServiceList from './Pages/DashBoard/ServiceList';
+import AddProducts from './Pages/DashBoard/AddProducts';
+import Details from './Pages/Home/Details';
+import NotFound from './Pages/Home/NotFound';
+import AddOrder from './Pages/DashBoard/AddOrder';
+
 
 
 function App() {
@@ -21,12 +29,26 @@ function App() {
 
         <Routes >
           <Route path='/' element={<Home></Home>}></Route>
-          <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
-          <Route path='/login' element={<LogIn></LogIn>}></Route>
-          <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
-          <Route path='/signup' element={<SignIn />}></Route>
-          <Route path='/contact' element={<Contact></Contact>}></Route>
-          <Route path='/team' element={<RequireAuth><Team></Team></RequireAuth>}></Route>
+          <Route path='portfolio' element={<Portfolio></Portfolio>}></Route>
+          <Route path='login' element={<LogIn></LogIn>}></Route>
+          <Route path='*' element={<NotFound />}></Route>
+          <Route path='services/:servicesId' element={<Details />}></Route>
+          <Route path='dashboard' element={<Dashboard />}>
+            <Route index element={<Order></Order>}
+            ></Route>
+            <Route path='review' element={<Review></Review>}
+            ></Route>
+            <Route path='admin' element={<MakeAdmin></MakeAdmin>}
+            ></Route>
+            <Route path='service' element={<AddProducts />}
+            ></Route>
+            <Route path='serviceList' element={<serviceList></serviceList>}
+            ></Route>
+          </Route>
+          <Route path='addOrder' element={<AddOrder />}></Route>
+          <Route path='signup' element={<SignIn />}></Route>
+          <Route path='contact' element={<Contact></Contact>}></Route>
+          <Route path='team' element={<RequireAuth><Team></Team></RequireAuth>}></Route>
         </Routes>
         <Footer></Footer>
       </Navbar>

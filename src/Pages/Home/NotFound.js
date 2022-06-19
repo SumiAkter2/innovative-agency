@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Review = () => {
+const NotFound = () => {
     return (
         <div>
-            <h1>Review</h1>
-
+            <h1>Soory</h1>
         </div>
     );
 };
 
-export default Review;
+export default NotFound;
