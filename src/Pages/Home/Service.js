@@ -15,12 +15,12 @@ const Service = ({ s }) => {
 
     return (
         <div>
-            <div class="card card-compact  shadow-xl" style={{ 'height': '600px' }}>
+            <div class="card card-compact  shadow-xl  selection:bg-fuchsia-300 selection:text-fuchsia-900" >
                 <figure ><img src={s.img} alt="{s.img}" style={{ 'height': '200px' }} /></figure>
                 <div class="card-body text-lg ">
                     <h2 class="card-title font-bold">{s.name}</h2>
-                    <p className='text-2xl font-bold'>Course Fee: {s.price}</p>
-                    <div class="rating rating-sm rating-half">
+                    {/* <p className='text-2xl font-bold'>Course Fee: {s.price}</p> */}
+                    <div class=" rating rating-sm rating-half">
                         <input type="radio" name="rating-10" class="rating-hidden" />
                         <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
                         <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
@@ -34,7 +34,7 @@ const Service = ({ s }) => {
                         <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
                     </div>
 
-                    <p>{s.des}</p>
+                    <p>{s.des.slice(0, 80)} ...</p>
                     <button onClick={() => handleButton(s._id)} className=' py-2 btn border-0  bg-gradient-to-r from-violet-400  font-bold text-xl'>Details</button>
                 </div>
             </div>
