@@ -39,7 +39,7 @@ const SignIn = () => {
     const onSubmit = data => {
         createUserWithEmailAndPassword(data.email, data.password, data.name);
         updateProfile({ displayName: data.name });
-        console.log('update done');
+        console.log(data.name);
         console.log(data.email, data.password, data.name);
     };
     return (

@@ -41,6 +41,9 @@ const Navbar = ({ children }) => {
                             <ul class="menu menu-horizontal ">
                                 {/* <!-- Navbar menu content here --> */}
                                 <li >  <NavLink to='/' className='rounded-lg  mr-4'>Home</NavLink></li>
+                                {
+                                    user ? <li >  <NavLink to='/addOrder' className='rounded-lg  mr-4'>Order</NavLink></li> : ''
+                                }
                                 <li >  <NavLink to='/dashboard' className='rounded-lg  mr-4'>Dashboard</NavLink></li>
                                 <li > <NavLink className='rounded-lg mr-4' to='/portfolio'>Portfolio</NavLink></li>
                                 <li > <NavLink className='rounded-lg mr-4' to='/team'>Our Team</NavLink></li>

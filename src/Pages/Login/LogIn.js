@@ -31,13 +31,16 @@ const LogIn = () => {
         );
     }
     const onSubmit = data => {
-        signInWithEmailAndPassword(data.email, data.password, data.name)
-        console.log(data.email, data.password, data.name);
+        signInWithEmailAndPassword(data.email, data.password, data.displayName)
+        console.log(data.email, data.password, data.displayName, user1);
+
     };
+    console.log(user);
+
     return (
         <div className='flex-col  justify-center  items-center '>
             <div className='card  mt-6'>
-                <div className='flex  justify-center items-center  h-screen  mt-6 '>
+                <div className='flex  justify-center items-center  h-screen  mb-0 '>
                     <form onSubmit={handleSubmit(onSubmit)} className='lg:w-96  p-4 rounded-lg border-8 shadow-2xl'>
                         <fieldset>
                             <legend className='text-3xl font-bold uppercase text-violet-600 my-6'>Log In</legend>
@@ -87,7 +90,7 @@ const LogIn = () => {
                     </form>
 
                 </div>
-                <p class="divider lg:mt-0 mt-24 lg:w-96 mx-auto mt-0 text-violet-600">OR</p>
+                <p class="divider mt-0  lg:w-96 mx-auto text-violet-600">OR</p>
                 <button onClick={() => signInWithGoogle()} className='btn btn-outline lg:w-96 w-64 mx-auto hover:bg-indigo-500'>Google</button>
 
             </div>

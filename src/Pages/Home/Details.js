@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const Details = () => {
+    const [user] = useAuthState(auth);
     const { servicesId } = useParams();
     const [services, setServices] = useState([]);
     useEffect(() => {
         fetch(`http://localhost:5000/services/${servicesId}`)
             .then(res => res.json())
             .then(data => setServices(data))
-    }, [])
+    }, [servicesId]);
+
+    // 
     return (
 
         <div className=''>
@@ -33,7 +37,9 @@ const Details = () => {
                             <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
                         </div>
                         <p class="py-6 text-2xl">   {services.des}</p>
-                        <Link to='/addOrder'> <button className=' py-2 btn border-0  bg-gradient-to-r from-violet-400  font-bold text-xl'>Order Now</button></Link>
+                        <button className=' py-2 btn border-0  bg-gradient-to-r from-violet-400  font-bold text-xl' >Order Now</button>
+                        <Link to='/'>
+                            <button className=' py-2 ml-6 btn border-0  bg-gradient-to-r from-violet-400  font-bold text-xl'>Back Home</button></Link>
                     </div>
                 </div>
             </div>
