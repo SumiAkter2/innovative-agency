@@ -2,15 +2,18 @@ import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import img from '../../assets/images/order2.jpg';
+import swal from 'sweetalert';
+
 const AddOrder = () => {
     const [user] = useAuthState(auth);
     console.log(user);
-    // const [services, setServices] = useState([]);
+
     const handleOrder = (e) => {
         e.preventDefault();
 
         const order = {
             name: e.target.option.value,
+            price: '3999tk',
             email: user?.email,
             userName: user?.displayName,
             Address: e.target.address.value,
@@ -19,7 +22,7 @@ const AddOrder = () => {
 
         }
         console.log(order);
-        console.log(order);
+
         fetch('http://localhost:5000/order', {
             method: 'POST',
             headers: {
@@ -30,6 +33,10 @@ const AddOrder = () => {
         })
             .then(res => res.json())
             .then(data => {
+                swal({
+                    text: 'Wow!!! Successfully Added !',
+                    icon: 'success'
+                });
                 // setServices(data);
                 console.log(data);
             })
