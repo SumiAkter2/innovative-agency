@@ -33,8 +33,9 @@ const Review = () => {
     // setValue('')
     return (
         <div>
+
             <div class="hero min-h-screen " style={{ "background-image": "url(https://i.ibb.co/dM4J166/review.png)" }} >
-                <div class="hero-overlay bg-opacity-50"></div>
+                <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-center ">
                     <div class="max-w-md ">
                         <h1 class=" text-5xl font-bold text-white">Give Your Review </h1>

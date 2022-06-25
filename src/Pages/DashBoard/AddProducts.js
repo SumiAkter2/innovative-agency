@@ -42,7 +42,7 @@ const AddProducts = () => {
 
                 </select>
                 <textarea type="text" name='area' placeholder="Type Description" class="textarea  mt-2 input-bordered text-black font-bold h-36 " />
-                <button type='submit' className='btn  btn-primary   text-white  bg-gradient-to-r from-violet-700 font-bold mt-6 '>Submit</button>
+                <button type='submit' className='btn text-white  bg-gradient-to-r from-violet-700 font-bold mt-6 '>Submit</button>
             </form>
 
         </div>

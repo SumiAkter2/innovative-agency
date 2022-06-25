@@ -16,6 +16,8 @@ import AddProducts from './Pages/DashBoard/AddProducts';
 import Details from './Pages/Home/Details';
 import NotFound from './Pages/Home/NotFound';
 import AddOrder from './Pages/DashBoard/AddOrder';
+import Profile from './Pages/DashBoard/Profile';
+import MyProfile from './MyProfile';
 // import ServiceList from './Pages/DashBoard/ServiceList';
 
 
@@ -36,12 +38,14 @@ function App() {
             ></Route>
             <Route path='review' element={<Review></Review>}
             ></Route>
+            {/* <Route path='profile' element={<Profile />}
+            ></Route> */}
             <Route path='admin' element={<MakeAdmin></MakeAdmin>}
             ></Route>
             <Route path='service' element={<AddProducts />}
             ></Route>
-            {/* <Route path='serviceList' element={<ServiceList></ServiceList>}
-            ></Route>  */}
+            <Route path='profile' element={<MyProfile />}
+            ></Route>
           </Route>
           <Route path='addOrder' element={<AddOrder />}></Route>
           <Route path='signup' element={<SignIn />}></Route>

@@ -18,7 +18,7 @@ const Service = ({ s }) => {
         <div>
             <div class="card card-compact rounded-sm shadow-xl  selection:bg-fuchsia-300 selection:text-fuchsia-900 mb-12" style={{ 'height': '700px' }}>
                 <figure ><img src={s.img} alt="{s.img}" style={{ 'height': '200px' }} /></figure>
-                <div class="card-body lg:text-lg bg-slate-300">
+                <div class="card-body lg:text-lg bg-slate-100">
                     <div class="divider"></div>
 
                     <div class=" rating rating-sm rating-half">

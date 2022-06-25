@@ -3,6 +3,7 @@ import React from 'react';
 const ReviewHome = ({ v }) => {
     return (
         <div>
+
             <div class="card w-full max-w-sm bg-base-100 shadow-xl my-6 border-4">
                 <figure class="px-10 pt-10">
                     <img src={v.img} alt="man" class="rounded-xl " />

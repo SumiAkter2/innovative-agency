@@ -9,16 +9,20 @@ const ViewReview = ({ v }) => {
             .then(data => setValue(data));
     }, [])
     return (
-        <div className='grid my-12 lg:grid-cols-3 md:grid-cols-2 gap-3 px-12'>
+        <div>
+            <h1 className='text-xl font-bold  mt-16 text-center text-blue-500'>We Are The Best</h1>
+            <h1 className='text-4xl font-bold  text-center text-blue-500'>Our Client Review</h1>
+            <div className='grid my-12 lg:grid-cols-3 md:grid-cols-2 gap-3 px-12'>
 
-            {
-                value.map(v => <ReviewHome key={v._id} v={v}></ReviewHome>
+                {
+                    value.map(v => <ReviewHome key={v._id} v={v}></ReviewHome>
 
 
-                )
-            }
+                    )
+                }
 
 
+            </div>
         </div>
     );
 };
