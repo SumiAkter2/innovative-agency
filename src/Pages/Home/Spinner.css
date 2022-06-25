@@ -1,19 +1,45 @@
-.box {
-    perspective: 150px;
-    /* margin-left: 100px; */
+.loader {
+    position: relative;
 }
 
-.coin {
-
-    width: 5em;
-    height: 5em;
+.outer,
+.middle,
+.inner {
+    border: 3px solid transparent;
+    border-top-color: #d315f0;
+    border-right-color: #1811ec;
     border-radius: 50%;
-    border: 6px solid #9f1aed;
-    animation: spin 3s ease-in-out infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.outer {
+    width: 3.5em;
+    height: 3.5em;
+    margin-left: -1.75em;
+    margin-top: -1.75em;
+    animation: spin 2s linear infinite;
+}
+
+.middle {
+    width: 2.1em;
+    height: 2.1em;
+    margin-left: -1.05em;
+    margin-top: -1.05em;
+    animation: spin 1.75s linear reverse infinite;
+}
+
+.inner {
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: -0.4em;
+    margin-top: -0.4em;
+    animation: spin 1.5s linear infinite;
 }
 
 @keyframes spin {
     to {
-        transform: rotateY(540deg);
+        transform: rotate(360deg);
     }
 }

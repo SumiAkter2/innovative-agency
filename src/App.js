@@ -16,7 +16,7 @@ import AddProducts from './Pages/DashBoard/AddProducts';
 import Details from './Pages/Home/Details';
 import NotFound from './Pages/Home/NotFound';
 import AddOrder from './Pages/DashBoard/AddOrder';
-import Profile from './Pages/DashBoard/Profile';
+// import Profile from './Pages/DashBoard/Profile';
 import MyProfile from './MyProfile';
 import { useState } from 'react';
 import Spinner from './Pages/Home/Spinner';

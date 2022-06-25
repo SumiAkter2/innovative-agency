@@ -4,9 +4,12 @@ import './Spinner.css';
 const Spinner = () => {
     return (
         <div>
-            <div class="box lg:mx-96 mx-24">
-                <div class="coin "></div>
+            <div class="loader ">
+                <div class="outer"></div>
+                <div class="middle"></div>
+                <div class="inner"></div>
             </div>
+
         </div>
     );
 };

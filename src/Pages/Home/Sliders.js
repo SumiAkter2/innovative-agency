@@ -1,54 +1,25 @@
-import React, { useState } from 'react';
-import Slider from 'react-slick';
-// import "~slick-carousel/slick/slick.css";
-// import "~slick-carousel/slick/slick-theme.css";
-import img1 from '../../assets/images/607567c8223a2fe5df41c91c_Email Templates.png';
+import React from 'react';
+import Carousel from 'carousel-react-rcdev'
 import img2 from '../../assets/images/design1.jpg';
 import img3 from '../../assets/images/design2.jpg';
 
-const images = [img1, img2, img3];
-
 const Sliders = () => {
-    const NextArrow = ({ onClick }
-    ) => {
-        return (
-            <div className='arrow next' onClick={onClick}>
-                left </div>
 
-        );
-    };
-    const PreArrow = ({ onClick }
-    ) => {
-        return (
-            <div className='arrow pre' onClick={onClick}>
-                right </div>
-
-        );
-    };
-    const [imageIndex, setImageIndex] = useState(0);
-    const settings = {
-        infinite: true,
-        slidesToShow: 3,
-        lazyLoad: true,
-        speed: 300,
-        centerMode: 0,
-        centerPadding: 0,
-        nextArrow: <NextArrow />,
-        preArrow: <PreArrow />,
-        beforeChange: (current, next) => setImageIndex(next),
-    }
     return (
-        <div className='App'>
-            <Slider {...settings}>
-                {
-                    images.map((img, index) => (
-                        <div className={index === imageIndex ? 'slide activeSlide' : 'slide'}>
-                            <img src={img} alt="{img}" />
-                        </div>
-                    ))
-                }
-            </Slider>
+        <div className='px-48 mt-24'>
+            <h1 className='text-5xl font-bold text-center mb-20  text-violet-500 '>Our work</h1>
+            <Carousel className='w-full bg-base-300 '>
+                <img className='mx-2' style={{ 'width': '400px' }} src='https://i.ibb.co/PcqxWW0/templete4.jpg' alt='img' />
+                <img className='mx-2' style={{ 'width': '400px' }} src='https://i.ibb.co/d65bqMw/temple3.jpg' alt='img' />
+                <img className='mx-2' style={{ 'width': '400px' }} src='https://i.ibb.co/zfJKmFV/templete2.jpg' alt='img' />
+                <img className='mx-2' style={{ 'width': '400px' }} src='https://i.ibb.co/7GzDjwM/templete1.jpg' alt='imagem' title='imagem' />
+                <img className='mx-2' style={{ 'width': '400px' }} src='https://i.ibb.co/mTfxN5V/templete5.png' alt='imagem' title='imagem' />
+                <img className='mx-2' style={{ 'width': '400px' }} src='https://i.ibb.co/f8QM51w/tem7.jpg' alt='imagem' title='imagem' />
+                <img className='mx-2' style={{ 'width': '400px' }} src={img2} alt='imagem' title='imagem' />
+                <img className='mx-2' style={{ 'width': '400px' }} src={img3} alt='imagem' title='imagem' />
+            </Carousel>
         </div>
+
     );
 };
 
