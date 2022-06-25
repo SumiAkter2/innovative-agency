@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 
 const AddOrder = () => {
     const [user] = useAuthState(auth);
-    console.log(user);
+
 
     const handleOrder = (e) => {
         e.preventDefault();
@@ -21,7 +21,7 @@ const AddOrder = () => {
             img: e.target.imgOption.value,
 
         }
-        console.log(order);
+
 
         fetch('http://localhost:5000/order', {
             method: 'POST',
@@ -38,7 +38,7 @@ const AddOrder = () => {
                     icon: 'success'
                 });
                 // setServices(data);
-                console.log(data);
+
             })
 
     }
