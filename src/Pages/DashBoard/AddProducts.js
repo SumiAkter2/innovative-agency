@@ -1,5 +1,5 @@
 import React from 'react';
-
+import swal from 'sweetalert';
 const AddProducts = () => {
 
     const handleAddService = e => {
@@ -19,7 +19,10 @@ const AddProducts = () => {
             body: JSON.stringify(addServices),
         }).then(res => res.json())
             .then(data => {
-                console.log(data);
+                swal({
+                    text: 'Success To Add New Product !!',
+                    icon: 'success'
+                })
             })
     }
     return (
@@ -29,9 +32,9 @@ const AddProducts = () => {
             <div class="divider w-full"></div>
             <form onSubmit={handleAddService} className='grid mx-6 w-full'>
 
-                <input name='name' className='input font-bold mt-2 input-bordered' placeholder='Type Service Name'></input>
+                <input name='name' className='input font-bold mt-2 input-bordered' placeholder='Type Service Name' required></input>
 
-                <input name='price' className='input font-bold mt-2 input-bordered' placeholder='Type Service Price'></input>
+                <input name='price' className='input font-bold mt-2 input-bordered' placeholder='Type Service Price' required></input>
 
                 <select name='imgOption' class="select   input mt-2 input-bordered  ">
 
@@ -41,7 +44,7 @@ const AddProducts = () => {
                     <option>https://i.ibb.co/7ndfYxd/ethical.jpg</option>
 
                 </select>
-                <textarea type="text" name='area' placeholder="Type Description" class="textarea  mt-2 input-bordered text-black font-bold h-36 " />
+                <textarea type="text" name='area' placeholder="Type Description" class="textarea  mt-2 input-bordered text-black font-bold h-36 " required />
                 <button type='submit' className='btn text-white  bg-gradient-to-r from-violet-700 font-bold mt-6 '>Submit</button>
             </form>
 

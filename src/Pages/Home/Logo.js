@@ -1,9 +1,9 @@
 import React from 'react';
-import icon1 from '../../assets/images/airbnb.png';
-import icon2 from '../../assets/images/google.png';
-import icon3 from '../../assets/images/netflix.png';
+import icon2 from '../../assets/images/airbnb.png';
+import icon3 from '../../assets/images/google.png';
+import icon1 from '../../assets/images/netflix.png';
 import icon4 from '../../assets/images/slack.png';
-import icon5 from '../../assets/images/netflix.png';
+import icon5 from '../../assets/images/uber.png';
 const Logo = () => {
     return (
         <div>
@@ -11,8 +11,8 @@ const Logo = () => {
                 <img src={icon4} alt="slack icon" />
                 <img src={icon5} alt="uber icon" />
                 <img src={icon1} alt="anb icon" />
-                <img src={icon2} alt="google icon" />
-                <img src={icon3} alt="netflix icon" />
+                <img src={icon3} alt="google icon" />
+                <img src={icon2} alt="netflix icon" />
 
             </div>
         </div>

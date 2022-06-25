@@ -18,11 +18,17 @@ import NotFound from './Pages/Home/NotFound';
 import AddOrder from './Pages/DashBoard/AddOrder';
 import Profile from './Pages/DashBoard/Profile';
 import MyProfile from './MyProfile';
+import { useState } from 'react';
+import Spinner from './Pages/Home/Spinner';
 // import ServiceList from './Pages/DashBoard/ServiceList';
 
 
 
 function App() {
+  const [loading] = useState(false);
+  if (loading) {
+    return <Spinner></Spinner>
+  }
   return (
     <div >
       <Navbar>

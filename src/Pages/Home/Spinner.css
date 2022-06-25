@@ -1,0 +1,19 @@
+.box {
+    perspective: 150px;
+    /* margin-left: 100px; */
+}
+
+.coin {
+
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    border: 6px solid #9f1aed;
+    animation: spin 3s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotateY(540deg);
+    }
+}
