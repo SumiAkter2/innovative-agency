@@ -1,5 +1,3 @@
-
-import './App.css';
 import Navbar from './Pages/Home/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
@@ -14,11 +12,11 @@ import Dashboard from './Pages/DashBoard/Dashboard';
 import Order from './Pages/DashBoard/Order';
 import MakeAdmin from './Pages/DashBoard/MakeAdmin';
 import Review from './Pages/DashBoard/Review';
-// import ServiceList from './Pages/DashBoard/ServiceList';
 import AddProducts from './Pages/DashBoard/AddProducts';
 import Details from './Pages/Home/Details';
 import NotFound from './Pages/Home/NotFound';
 import AddOrder from './Pages/DashBoard/AddOrder';
+// import ServiceList from './Pages/DashBoard/ServiceList';
 
 
 
@@ -42,8 +40,8 @@ function App() {
             ></Route>
             <Route path='service' element={<AddProducts />}
             ></Route>
-            <Route path='serviceList' element={<serviceList></serviceList>}
-            ></Route>
+            {/* <Route path='serviceList' element={<ServiceList></ServiceList>}
+            ></Route>  */}
           </Route>
           <Route path='addOrder' element={<AddOrder />}></Route>
           <Route path='signup' element={<SignIn />}></Route>
