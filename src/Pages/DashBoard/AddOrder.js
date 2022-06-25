@@ -50,7 +50,7 @@ const AddOrder = () => {
                     <img src={img} className="h-full" alt='order-img' />
                     <div>
                         <h1 class="text-5xl mb-6 font-bold text-purple-600"> Add Services</h1>
-                        <form onSubmit={handleOrder} className=''>
+                        <form onSubmit={handleOrder} >
 
                             <input type="text" value={user?.email} placeholder="Type here" class="input mt-2 input-primary w-full max-w-xs" />
                             <input type="text" value={user?.displayName} placeholder="Type Name" class="input mt-2 input-primary w-full max-w-xs" />
