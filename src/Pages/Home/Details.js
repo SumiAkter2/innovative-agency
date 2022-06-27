@@ -8,7 +8,7 @@ const Details = () => {
     const { servicesId } = useParams();
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${servicesId}`)
+        fetch(`https://warm-refuge-78132.herokuapp.com/services/${servicesId}`)
             .then(res => res.json())
             .then(data => setServices(data))
     }, [servicesId]);

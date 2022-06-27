@@ -4,7 +4,7 @@ import ReviewHome from './ReviewHome';
 const ViewReview = ({ v }) => {
     const [value, setValue] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://warm-refuge-78132.herokuapp.com/review')
             .then(res => res.json())
             .then(data => setValue(data));
     }, [])

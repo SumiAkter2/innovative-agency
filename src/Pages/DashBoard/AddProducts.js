@@ -11,7 +11,7 @@ const AddProducts = () => {
             des: e.target.area.value,
         }
         console.log(addServices);
-        fetch('http://localhost:5000/services', {
+        fetch('https://warm-refuge-78132.herokuapp.com/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

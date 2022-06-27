@@ -11,7 +11,7 @@ const Order = () => {
     const [user] = useAuthState(auth);
     const [order, setOrder] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${user?.email}`)
+        fetch(`https://warm-refuge-78132.herokuapp.com/orders/${user?.email}`)
             .then(res => res.json())
             .then(data => setOrder(data));
     }, [user?.email]);
@@ -19,7 +19,7 @@ const Order = () => {
 
         alert('Sure to delete?')
 
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://warm-refuge-78132.herokuapp.com/orders/${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json',

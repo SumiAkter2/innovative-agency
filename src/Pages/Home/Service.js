@@ -17,7 +17,7 @@ const Service = ({ s }) => {
     return (
         <div>
             <div class="card card-compact rounded-sm shadow-xl  selection:bg-fuchsia-300 selection:text-fuchsia-900 mb-12" style={{ 'height': '700px' }}>
-                <figure ><img src={s.img} alt="{s.img}" style={{ 'height': '200px' }} /></figure>
+                <figure ><img src={s.img} alt="{s.img}" style={{ 'height': '200px' }} className='rounded-tr-lg rounded-bl-lg' /></figure>
                 <div class="card-body lg:text-lg bg-slate-100">
                     <div class="divider"></div>
 
@@ -44,7 +44,7 @@ const Service = ({ s }) => {
                     >
                         <button onClick={() => handleButton(s._id)} className='  text-black
                          btn bg-gradient-to-r from-violet-400 border-0 bg-gray-400 py-2
-                          rounded-sm font-bold '>Order Now</button></Link>
+                          rounded-sm font-bold rounded-tr-lg rounded-bl-lg'>Order Now</button></Link>
 
 
                 </div>

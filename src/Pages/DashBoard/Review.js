@@ -17,7 +17,7 @@ const Review = () => {
             img: e.target.imgOption.value,
             comment: e.target.area.value,
         }
-        fetch(`http://localhost:5000/review`, {
+        fetch(`https://warm-refuge-78132.herokuapp.com/review`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
