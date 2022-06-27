@@ -1,14 +1,12 @@
 import React from 'react';
-import Carousel from 'carousel-react-rcdev'
+
 const ReviewHome = ({ v }) => {
     return (
         <div>
-            {/* <Carousel className='w-full'>
-                
-            </Carousel> */}
+
             <div class="card w-full max-w-sm bg-base-100 shadow-xl my-6 border-4">
                 <figure class="px-10 pt-10">
-                    <img src={v.img} alt="man" class="rounded-xl " />
+                    <img src={v.img} alt="man" className='rounded-tr-3xl rounded-bl-3xl' />
 
                 </figure>
                 <div class="card-body items-center text-center">

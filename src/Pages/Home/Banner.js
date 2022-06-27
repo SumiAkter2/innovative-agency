@@ -17,7 +17,7 @@ const Banner = () => {
                 <div className="hero-content  flex-col  lg:flex-row-reverse">
                     <img src={banner} className="h-full" alt='banner-img' />
                     <div>
-                        <h1 className="text-5xl font-bold text-purple-500">Lets Your Brand Growth With Us</h1>
+                        <h1 className="text-5xl font-bold text-purple-500 pb-6">Lets Your Brand Growth With Us</h1>
                         <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                         <Button >Get Started</Button>
 

@@ -64,10 +64,14 @@ const Navbar = ({ children }) => {
                     <ul class="menu p-4 overflow-y-auto w-40 bg-transparent">
 
                         <li >  <NavLink className='rounded-lg mb-4' to='/'>Home</NavLink></li>
+                        {
+                            user ? <li >  <NavLink to='/addOrder' className='rounded-lg  mb-4'>Order</NavLink></li> : ''
+                        }
+                        <li >  <NavLink to='/dashboard' className='rounded-lg  mb-4'>Dashboard</NavLink></li>
                         <li > <NavLink className='rounded-lg mb-4' to='/portfolio'>Portfolio</NavLink></li>
                         <li > <NavLink className='rounded-lg mb-4' to='/team'>Our Team</NavLink></li>
                         <li ><NavLink className='rounded-lg mb-4' to='/contact'>Contact Us</NavLink></li>
-
+                        {user ? <NavLink onClick={logout} className='rounded-lg ' to='/login'><Button>Sign Out</Button></NavLink> : <NavLink className='rounded-lg mb-4' to='/login'><Button>Log In</Button></NavLink>}
                     </ul>
 
                 </div>

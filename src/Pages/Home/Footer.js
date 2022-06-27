@@ -60,8 +60,8 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-            </footer>
-        </div>
+            </footer >
+        </div >
     );
 };
 
